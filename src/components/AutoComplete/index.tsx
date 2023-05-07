@@ -1,4 +1,4 @@
-import React, { Ref, forwardRef } from "react";
+import { forwardRef } from "react";
 import CloseIcon from "../CloseIcon";
 import SearchIcon from "../SearchIcon";
 import "./autoComplete.style.css";

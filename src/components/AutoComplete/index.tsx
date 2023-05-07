@@ -25,7 +25,7 @@ const AutoComplete = forwardRef<HTMLButtonElement, IAutoCompleteProps>(({
         <div className="overlay" onClick={() => setShowList(false)} />
       )}
       <div className="autocomplete-container">
-        <form className="search" onSubmit={handleSubmit} autoComplete="off">
+        <form className={`search ${showList ? 'brbn' : null}`} onSubmit={handleSubmit} autoComplete="off">
           <div className="form-control">
             <input
               type="text"

@@ -1,10 +1,10 @@
-import React from "react";
+import React, { Ref, forwardRef } from "react";
 import CloseIcon from "../CloseIcon";
 import SearchIcon from "../SearchIcon";
 import "./autoComplete.style.css";
 import { IAutoCompleteProps, IData } from "../../interface";
 
-const AutoComplete: React.FC<IAutoCompleteProps> = ({ 
+const AutoComplete = forwardRef<HTMLButtonElement, IAutoCompleteProps>(({ 
   placeholder, 
   showList,
   setShowList,
@@ -17,7 +17,7 @@ const AutoComplete: React.FC<IAutoCompleteProps> = ({
   highlightMatch,
   results,
   clearInput
-}) => {
+}, ref) => {
 
   return (
     <div className="wrapper">
@@ -40,7 +40,7 @@ const AutoComplete: React.FC<IAutoCompleteProps> = ({
               </div>
             )}
           </div>
-          <button type="submit" className="search-icon">
+          <button type="submit" className="search-icon" ref={ref}>
             <SearchIcon />
           </button>
         </form>
@@ -96,6 +96,6 @@ const AutoComplete: React.FC<IAutoCompleteProps> = ({
       )}
     </div>
   );
-};
+});
 
 export default AutoComplete;

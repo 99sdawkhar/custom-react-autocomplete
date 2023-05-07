@@ -55,10 +55,12 @@
 }
 
 .search-icon {
-  padding: 10px;
+  padding: 14px 10px;
   border-radius: 0;
-  background-color: #fff;
   outline: none;
+  border: none;
+  background: linear-gradient(to right, black 50%, white 50%);
+  background-size: 200% 100%;
 }
 
 .search-icon svg {
@@ -69,8 +71,10 @@
   cursor: pointer;
 }
 
+.search-icon:focus,
 .search-icon:hover {
   border-color: transparent;
+  animation: swipe 2s 0.2s forwards;
 }
 
 .search-icon:hover svg {
@@ -149,4 +153,13 @@ h3 {
 
 .highlighted {
   background-color: #ff0;
+}
+
+@keyframes swipe {
+  0% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
 }

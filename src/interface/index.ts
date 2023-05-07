@@ -1,4 +1,4 @@
-import { SyntheticEvent } from "react";
+import { RefObject, SyntheticEvent } from "react";
 
 
 export interface IData {
